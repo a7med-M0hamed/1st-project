@@ -1,0 +1,521 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+img{
+    width: 300px;
+}
+.clear{
+    clear: both;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.header{
+    position: relative;
+    background-image: url(../images/TRAVELER.png);
+    background-attachment: scroll;
+    height: 100vh;
+    background-size: 100% 100%;
+    overflow: auto;
+}
+.header .navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.header .navbar a img{
+    width: 50px;
+    margin-left: 100px;
+    transition: all 0.3s;
+}
+.header .navbar a img:hover{
+    width: 60px;
+}
+.header .navbar ul{
+    display: flex;
+    margin-right: 20px;
+}
+.header .navbar ul li{
+    list-style: none;
+    padding: 20px;
+    /* margin-top: 30px; */
+    font-family: 'Indie Flower', cursive;
+}
+.header .navbar ul a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    transition: all 0.2s;
+}
+.header .navbar ul a:hover{
+    color: white;
+    font-size: 25px;
+    text-decoration: underline dashed red;
+}
+.header .navbar i{
+    font-size: 40px;
+    padding: 10px;
+    display: none;
+}
+@media(max-width:767px){
+    .header .navbar ul{
+        display: none;
+    }
+    .header .navbar  i{
+        display: block;
+    }
+} 
+@media(min-width:767px) and (max-width:992px){
+    .header .navbar ul{
+        display: none;
+    }
+    .header .navbar  i{
+        display: block;
+    }
+} 
+.header .text{
+    z-index: 3;
+    text-align: center;
+    width: 60%;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+.header .text span{
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    opacity: 0.7;
+}
+.header .text p{
+    font-size:20px ;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    margin-bottom: 50px;
+    margin-top: 25%;
+}
+.header .text a{
+    text-decoration: none;
+    font-size: 15px;
+}
+.header .text .a1{
+    padding: 15px 50px;
+    cursor: pointer;
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.3s;
+}
+.header .text .a1:hover{
+    padding: 20px 60px;
+    background-color: red;
+    color: white;
+}
+.header .text .a2{
+    padding: 15px 50px;
+    margin-left: 10px;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 3px solid black;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+.header .text .a2:hover{
+    padding: 20px 60px;
+    border-color: red;
+}
+
+/* end header */
+/* start about */
+.about{
+    position: relative;
+    height: 50vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color:#20212c;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about .image{
+    overflow: hidden;
+}
+.about .image .black{
+    background-color: rgba(0, 0, 0, 0.267);
+    width: 550px;
+    height: 313px;
+    position: absolute;
+    left: 48px;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.5s;
+}
+.about .image:hover .black{
+    opacity: 1;
+}
+.about .image .black button{
+    padding: 10px 20px;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    cursor: pointer;
+}
+.about .image img{
+    width: 550px;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+.about .image:hover img{
+    transform: scale(1.2) rotate(2deg);
+}
+.about .text{
+    width: 600px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 20px;
+}
+.about .text h1{
+    font-size: 40px;
+    font-family: 'Caveat', cursive;
+    padding: 10px;
+    text-decoration: underline dashed red;
+}
+.about .text p{
+    font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 10px;
+}
+@media(max-width:767px){
+    .about .text{
+        width: 400px;
+    }
+    .about .text h1{
+        font-size: 30px;
+    }
+    .about .text p{
+        font-size: 15px;
+    }
+    .about .image img{
+        width: 350px;
+    }
+    .about .image .black{
+        width: 350px;
+        height: 200px;
+        position: absolute;
+        left: 0;
+    }
+}
+@media(min-width:767px) and (max-width:992px){
+    .about .text{
+        width: 500px;
+    }
+    .about .text h1{
+        font-size: 30px;
+    }
+    .about .text p{
+        font-size: 15px;
+    }
+    .about .image img{
+        width: 450px;
+    }
+    .about .image .black{
+        width: 450px;
+        height: 250px;
+        position: absolute;
+        left: 0;
+    }
+}
+/* end about */
+/* start third section */
+.destination{
+    text-align: center;
+    padding: 30px;
+}
+.destination h1{
+    text-decoration: underline dashed red;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+}
+.destination p{
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Rajdhani', sans-serif;
+}
+/* end destination */
+.cards{
+    background-color: #20212c;
+    border-radius: 5px;
+    text-align: center;
+}
+.cards .c{
+    width: 33%;
+    float: left;
+    padding: 15px;
+}
+.cards .c img{
+    width: 385px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.cards .c img:hover{
+    width: 365px;
+    border-radius: 50px;
+}
+.cards .c p{
+    padding-top: 10px;
+    font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
+}
+@media(max-width:767px){
+    .cards .c{
+        width: 100%;
+        padding: 5px;
+    }
+}
+@media(min-width:767px) and (max-width:992px){
+    .cards .c{
+        width: 50%;
+        padding: 5px;
+    }
+    .cards .c img{
+        width: 300px;
+    }
+}
+/* end cards */
+/* زرار بعد الصور */
+.contact{
+    text-align: center;
+    padding: 30px;
+}
+.contact a{
+    padding: 10px 60px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 600;
+    border-radius: 30px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.3s;
+    text-decoration: none;
+}
+.contact a:hover{
+    padding: 15px 65px;
+    background-color: red;
+    color: rgb(0, 0, 0);
+}
+/* start services */
+.services{
+    background-image: url(../images/luca-bravo-O453M2Liufs-unsplash.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+    height: 55vh;
+    /* border-top-left-radius:120px;
+    border-bottom-right-radius: 120px; */
+}
+.services .text{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.services .text h1{
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    text-decoration: underline dashed red;
+    color: rgb(0, 0, 0);
+}
+.services .cards{
+    margin-top: 45px;
+    background-color: #20212c;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+}
+.services .cards .s{
+    width: 33%;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s;
+}
+.services .cards .s:hover{
+    color: rgb(0, 0, 0);
+    background-color:#3a3e69;
+    border-radius:20px;
+    padding: 30px;
+}
+.services .cards .s i{
+    font-size: 60px;
+    color:#f9b985;
+}
+.services .cards .s h1{
+    font-size: 25px;
+    font-family: 'Patrick Hand SC', cursive;
+}
+.services .cards .s p{
+    font-size: 15px;
+    font-family: 'Rajdhani', sans-serif;
+}
+@media(max-width:767px){
+    .services{
+        height: 130vh;
+    }
+    .services .cards{
+        flex-wrap: wrap;
+    }
+    .services .cards .s{
+        width: 100%;
+        padding: 40px;
+    }
+}
+@media(min-width:767px) and (max-width:992px){
+    .services{
+        height: 100vh;
+    }
+    .services .cards .s{
+        width: 50%;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+}
+@media(min-width:992px) and (max-width:1200px){
+    .services{
+        height: 60vh;
+    }
+}
+/* end services */
+/* start why choose us */
+.why{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.why .text{
+    width: 60%;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 20px auto;
+}
+.why .text h1{
+    font-size: 35px;
+    font-family: 'Caveat', cursive;
+    padding: 5px;
+    text-decoration: underline dashed red;
+}
+.why .text p{
+    font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 10px;
+}
+.why .reasons{
+    display: flex;
+    background-color: #20212c;
+    border-radius: 10px;
+}
+.why .reasons .r{
+    width: calc(100 / 4);
+    padding: 10px;
+    color: white;
+    text-align: center;
+    transition: all 0.5s;
+}
+.why .reasons .r:hover{
+    padding: 20px;
+    background-color:#3a3e69;
+    border-radius: 10px;
+}
+.why .reasons .r img{
+    width: 120px;
+    padding: 15px;
+    transition: all 0.5s;
+}
+.why .reasons .r:hover img{
+    width: 150px;
+}
+.why .reasons .r h1{
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: underline double red;
+    font-family: 'Patrick Hand SC', cursive;
+}
+.why .reasons .r:hover h1{
+    color: black;
+}
+.why .reasons .r p{
+    font-size: 15px;
+    font-family: 'Rajdhani', sans-serif;
+    padding-top: 5px;
+}
+@media(max-width:767px){
+    .why .reasons{
+        flex-wrap: wrap;
+    }
+    .why .reasons .r{
+        width: 50%;
+    }
+}
+@media(min-width:767px) and (max-width:992px){
+    .why .reasons .r{
+        width: 50%;
+    }
+}
+/* end why */
+/* start 6th section join our community */
+.join{
+    background-image: url(../images/aerial-view-koh-hong-island-krabi-thailand.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 40vh;
+    text-align: center;
+}
+.join h1{
+    font-size: 40px;
+    font-family: 'Patrick Hand SC', cursive;
+    padding-top:50px ;
+    padding-bottom: 5px;
+    text-decoration: underline dashed red;
+    transition: all 0.5s;
+}
+.join:hover h1{
+    font-size: 50px;
+}
+.join .bar{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+.join .bar input{
+    width: 400px;
+    height: 55px;
+    padding: 15px;
+    border: none;
+}
+.join .bar button{
+    padding: 13px 50px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-family: 'Indie Flower', cursive;
+    transition: all 0.5s;
+}
+.join .bar button:hover{
+    background-color: red;
+    color: black;
+}
